@@ -1,0 +1,53 @@
+$fontDigital: 'VT323';
+
+body {
+    background-color: #121;
+    box-shadow: inset 0 0 200px #020;
+    background: repeating-linear-gradient(0deg, #000, #000 2px, #020 2px, #020 4px);
+    color: #0f0;
+    font-size: 16px;
+    min-height: 100vh; 
+    padding: 20px;
+    font-family: $fontDigital;
+}
+
+a {
+    color: inherit;
+    text-shadow: 0 0 3px green, 0 0 5px green, 0 0 10px green;
+    text-transform: uppercase;
+    &:hover {
+        text-decoration: none;
+        background-color: green;
+        color: #000;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+}
+
+#site-title {
+    font-family: $fontDigital;
+    text-align: center;
+    a {
+        text-decoration: none;
+        font-size: 2em;
+    }
+
+}
+
+/* Posts */
+.posts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .post-thumb {
+        width: 33.333%;
+        flex-grow: 1;
+        box-sizing: border-box;
+        padding: .5em;
+    }
+}
+
+footer {
+    text-align: center;
+}
