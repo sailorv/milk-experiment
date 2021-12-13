@@ -10,6 +10,12 @@ export const useLatestBlogPosts = () => {
               title
               uri
               excerpt
+              featuredImage {
+                node {
+                    altText
+                    sourceUrl
+                }
+              }
               categories {
                 edges {
                   node {

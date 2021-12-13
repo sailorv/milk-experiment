@@ -1,0 +1,23 @@
+.wp-block-gallery {
+    ul.blocks-gallery-grid {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        li.blocks-gallery-item figure, li.blocks-gallery-item figure img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &.columns-3 {
+        li.blocks-gallery-item {
+            width: 33.33%;
+            box-sizing: border-box;
+            padding: 0 .5em;
+        }
+    }
+}

@@ -2,7 +2,11 @@
 @import 'components';
 @import 'animations';
 @import 'typography';
+@import 'gutenberg_overwrites';
 
-#site-title {
-    font-family: $fontDigital;
+::selection {
+    background-color:green;
+}
+a {
+  cursor: pointer;
 }

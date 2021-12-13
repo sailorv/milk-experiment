@@ -39,6 +39,23 @@ hr {
     margin-bottom: 1.5em;
 }
 
+/* Grid */
+/* Grid */
+.col-2 {
+    width: 50%;
+}
+.col-3 {
+    width: 33%;
+    box-sizing: border-box;
+    padding: .5em;
+}
+
+@media only screen and (max-width: 900px) {
+    .col-2, .col-3 {
+        width: 100%;
+    }
+}
+
 /* Tags and Categories */
 .tag-cloud a, .categories a {
     display: inline-block;

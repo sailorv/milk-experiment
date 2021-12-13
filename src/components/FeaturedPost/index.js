@@ -9,13 +9,14 @@ const FeaturedPost = () => {
  return (
      <div className="posts-wrapper">
          <div className="thumbnail-posts">
-            {new Array(1).fill("").map((element, i) => (
+            {new Array(2).fill("").map((element, i) => (
                 <PostThumb 
                     key={i}
                     title={ post.wpgraphql.posts.edges[`${i}`].node.title }
                     excerpt={ post.wpgraphql.posts.edges[`${i}`].node.excerpt }
                     uri={ post.wpgraphql.posts.edges[`${i}`].node.uri }
                     category={ post.wpgraphql.posts.edges[`${i}`].node.categories.edges[0].node.name }
+                    image={ post.wpgraphql.posts.edges[`${i}`].node.featuredImage.node.sourceUrl }
                 />
             ))}   
          </div>

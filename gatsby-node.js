@@ -8,10 +8,21 @@
 const path = require(`path`)
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+
   const BlogPostTemplate = path.resolve("./src/templates/BlogPost.js")
+  const CategoryTemplate = path.resolve("./src/templates/CategoryPage.js")
+
   const result = await graphql(`
     query GetPostsPages {
       wpgraphql {
+        categories {
+          edges {
+            node {
+              uri
+              id
+            }
+          }
+        }
         posts {
           edges {
             node {
@@ -25,6 +36,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `)
   
   const BlogPosts = result.data.wpgraphql.posts.edges
+  const Categories = result.data.wpgraphql.categories.edges
 
   BlogPosts.forEach(post => {
     createPage({
@@ -32,6 +44,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: BlogPostTemplate,
       context: {
         id: `${post.node.id}`
+      },
+    })
+  })
+  Categories.forEach(category => {
+    createPage({
+      path: `${category.node.uri}`,
+      component: CategoryTemplate,
+      context: {
+        id: `${category.node.id}`
       },
     })
   })

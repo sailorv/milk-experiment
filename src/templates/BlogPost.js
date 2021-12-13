@@ -9,8 +9,26 @@ const BlogPostTemplate = ({ data }) => (
         <Seo
             title={ data.wpgraphql.post.title }
         />
-        <h1 style={{textAlign: `center`, maxWidth: `300px`, margin: `.5em auto`}}>{ data.wpgraphql.post.title }</h1>
-        <hr style={{maxWidth: `600px`, margin: `0 auto 2em auto`}} />
+        <section id="post-meta" style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+
+        }}
+        >
+            <div id="post-image" className="col-2">
+            <div className="post-image animate-scanline">
+                <img src={ data.wpgraphql.post.featuredImage.node.sourceUrl } />
+                <div class="fade"></div>
+                <div class="green"></div>
+            </div>
+            </div>
+            <div id="post-title" className="col-2">
+                <h1>{ data.wpgraphql.post.title }</h1>
+                <div dangerouslySetInnerHTML={{__html: data.wpgraphql.post.excerpt }} />
+            </div>
+        </section>
+        
         <div className="post-content" style={{maxWidth:`960px`, margin: `0 auto`,}} dangerouslySetInnerHTML={{ __html: data.wpgraphql.post.content }} />
 
   </Layout>
@@ -26,6 +44,12 @@ query($id: ID = "cG9zdDoxOTk=") {
         title
         excerpt
         content
+        featuredImage {
+            node {
+                altText
+                sourceUrl
+            }
+        }
         }
     }
 }  
