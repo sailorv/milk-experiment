@@ -7,3 +7,15 @@ header {
         width: 33.3333%;
     }
 }
+
+#site-title {
+    text-align: center;
+    a {
+        text-decoration: none;
+        font-size: 2em;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+}

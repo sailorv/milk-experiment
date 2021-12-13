@@ -16,7 +16,14 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        sassOptions: {
+          includePaths: ["./src/styles/_variables.scss", ".src/styles/styles.scss"],
+        },
+      },
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -43,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`VT323`],
+        fonts: [`VT323`,`Share Tech Mono`],
         display: `swap`,
       },
     },

@@ -1,14 +1,14 @@
-$fontDigital: 'VT323';
-
 body {
     background-color: #121;
     box-shadow: inset 0 0 200px #020;
     background: repeating-linear-gradient(0deg, #000, #000 2px, #020 2px, #020 4px);
     color: #0f0;
-    font-size: 16px;
     min-height: 100vh; 
     padding: 20px;
-    font-family: $fontDigital;
+}
+
+p {
+    font-family: "Share Tech Mono", sans-serif;
 }
 
 a {
@@ -22,30 +22,124 @@ a {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: inherit;
+hr {
+    position: relative;
+    height: fit-content;
+    color: #0f0;
+    border-color:#0f0;
+    background: repeating-linear-gradient(0deg, #0c0, #0c0 1px, #050 1px, #050 2px);
+    &:after {
+        content: "✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱";
+        position: relative;
+        color:#000;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
 }
 
-#site-title {
-    font-family: $fontDigital;
-    text-align: center;
-    a {
-        text-decoration: none;
-        font-size: 2em;
-    }
+blockquote.wp-block-quote {
+    background-color: #000;
+    padding: 1em;
+    border: solid 1px;
+}
 
+h2 {
+    &::after {
+        content: "**";
+        padding-left: .5em;
+    }
+    &::before {
+        content: "**";
+        padding-right: .5em;
+    }
+    text-align: center;
+    padding: 0 2em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* Grid */
+.col-3 {
+    width: 33%;
+    box-sizing: border-box;
+    padding: .5em;
+}
+
+@media only screen and (max-width: 900px) {
+    .col-3 {
+        width: 100%;
+    }
 }
 
 /* Posts */
-.posts-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+.thumbnail-posts {
     .post-thumb {
-        width: 33.333%;
-        flex-grow: 1;
         box-sizing: border-box;
         padding: .5em;
     }
+}
+
+
+.excerpt-posts {
+    .post-thumb {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    .post-category {
+        text-align: left;
+    }
+    h3 {
+        margin-bottom: 0;
+    }
+}
+
+.post-category {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.post-content {
+    font-family: "Share Tech Mono", Arial, Helvetica, sans-serif;
+}
+
+
+/* Image handling */
+.post-image {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    max-height: 400px;
+    mix-blend-mode: lighten;
+    opacity: .8;
+    .fade {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(transparent, black 90%);
+        position: absolute;
+        top: 0;
+        box-shadow: inset 0 0 40px 40px black;
+    }
+    .green {
+        background-blend-mode: color;
+        mix-blend-mode: color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: green;
+    }
+    img {
+        margin: 0 auto;
+        background-color: #0f0;
+        max-width: 100%;
+        filter: grayscale(100%);
+    } 
 }
 
 footer {

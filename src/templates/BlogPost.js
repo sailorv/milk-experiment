@@ -9,8 +9,9 @@ const BlogPostTemplate = ({ data }) => (
         <Seo
             title={ data.wpgraphql.post.title }
         />
-        <h1>{ data.wpgraphql.post.title }</h1>
-        <div className="post-content" dangerouslySetInnerHTML={{ __html: data.wpgraphql.post.content }} />
+        <h1 style={{textAlign: `center`, maxWidth: `300px`, margin: `.5em auto`}}>{ data.wpgraphql.post.title }</h1>
+        <hr style={{maxWidth: `600px`, margin: `0 auto 2em auto`}} />
+        <div className="post-content" style={{maxWidth:`960px`, margin: `0 auto`,}} dangerouslySetInnerHTML={{ __html: data.wpgraphql.post.content }} />
 
   </Layout>
 )
