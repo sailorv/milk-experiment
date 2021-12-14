@@ -9,7 +9,7 @@ import SciFiAdjacentPosts from "../SciFiAdjacentPosts"
 const HomePageHeader = () => {
     return (
         <div style={{display: "flex", flexWrap: "wrap"}}>
-            <div className="col-3">
+            <div className="col-3 mobile-last">
                 <h2>A Milk Experiment</h2>
                 <p>Rydell got his bag of cornflakes out of the cupboard and carefully unrolled it. About enough for a bowl. He opened the fridge and took out a plastic, snap-top, liter container with a strip of masking-tape across the side. He'd written <strong>MILK EXPERIMENT</strong> on the masking-tape with a heavy marker.</p>
                 <p>"What's that?" Hernandez asked.<br />

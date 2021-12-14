@@ -1,12 +1,20 @@
 @import 'variables';
-@import 'components';
 @import 'animations';
 @import 'typography';
+@import 'mixins';
+
+@import 'components';
+@import 'media';
+
 @import 'gutenberg_overwrites';
 
+body {
+  background-color: #121;
+}
 ::selection {
     background-color:green;
 }
+
 a {
   cursor: pointer;
 }

@@ -1,0 +1,46 @@
+@mixin cut-corner {
+    background-color: $black;
+    border: solid 1px;
+    position: relative;
+    &::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        right: -20px;
+        bottom: -20px;
+        position: absolute;
+        border-right: 1px solid $green;
+        transform: rotate(-135deg);
+        background: repeating-linear-gradient(135deg, #000, #000 2px, #020 2px, #020 4px);;
+    }
+    &::before {
+        content: "";
+        width: 40px;
+        height: 40px;
+        left: -20px;
+        top: -20px;
+        position: absolute;
+        border-right: 1px solid #0f0;
+        transform: rotate(45deg);
+        background: repeating-linear-gradient(-45deg, #000, #000 2px, #020 2px, #020 4px);
+    }
+    margin-bottom: 1.5em;
+}
+
+@mixin cut-corner-top-right {
+    background-color: $black;
+    border: solid 1px;
+    position: relative;
+    &::after {
+        content: "";
+        width: 40px;
+        height: 40px;
+        right: -20px;
+        top: -20px;
+        position: absolute;
+        border-right: 1px solid $green;
+        transform: rotate(135deg);
+        background: repeating-linear-gradient(-135deg, #000, #000 2px, #020 2px, #020 4px);;
+    }
+    margin-bottom: 1.5em;
+}

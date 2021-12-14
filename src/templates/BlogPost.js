@@ -12,6 +12,7 @@ const BlogPostTemplate = ({ data }) => (
         <section id="post-meta" style={{
             display: "flex",
             flexDirection: "row",
+            flexWrap: "wrap",
             alignItems: "center",
 
         }}
@@ -25,7 +26,7 @@ const BlogPostTemplate = ({ data }) => (
             </div>
             <div id="post-title" className="col-2">
                 <h1>{ data.wpgraphql.post.title }</h1>
-                <div dangerouslySetInnerHTML={{__html: data.wpgraphql.post.excerpt }} />
+                <div className="mobile-hide" dangerouslySetInnerHTML={{__html: data.wpgraphql.post.excerpt }} />
             </div>
         </section>
         
@@ -36,8 +37,8 @@ const BlogPostTemplate = ({ data }) => (
 
 export default BlogPostTemplate
 
-export const pageQuery = graphql`
-query($id: ID = "cG9zdDoxOTk=") {
+export const postQuery = graphql`
+query($id: ID = "") {
     wpgraphql {
         post(id: $id) {
         id

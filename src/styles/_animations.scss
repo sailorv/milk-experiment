@@ -14,12 +14,6 @@
     animation: scanline 5s linear infinite
 }
 
-#site-title::after {
-    content: "|";
-    animation: blink 1s step-start infinite;
-    font-size:2em;
-}
-
 .animate-flicker {
     animation: flicker 0.01s infinite;
 }

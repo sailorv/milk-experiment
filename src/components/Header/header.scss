@@ -8,6 +8,18 @@ header {
     }
 }
 
+@media only screen and (max-width: 499px) {
+    header {
+        .header-child {
+            display: none;
+        }
+        .header-child#site-title {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
 #site-title {
     text-align: center;
     a {
@@ -19,3 +31,4 @@ header {
     }
 
 }
+

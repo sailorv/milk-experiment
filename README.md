@@ -14,5 +14,6 @@
 ## To-do list
 - 🚀 Hook up NASA APOD to API
 - 🚀 Build category pages
-- 🚀 Import images from WordPress
-- 🚀 Finish featured post section
+- 🚀 Search
+- 🚀 About page
+- 🚀 Image styling on blog posts

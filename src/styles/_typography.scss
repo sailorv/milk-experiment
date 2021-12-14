@@ -12,6 +12,47 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $fontDigital;
 }
 
+h1 {
+    font-weight: normal;
+}
+
 #site-title {
     font-family: $fontDigital;
+}
+
+
+
+a {
+    color: inherit;
+    text-shadow: 0 0 3px green, 0 0 5px green, 0 0 10px green;
+    text-transform: uppercase;
+    &:hover {
+        text-decoration: none;
+        background-color: green;
+        color: #000;
+    }
+}
+
+h2 {
+    &::after {
+        content: "**";
+        padding-left: .5em;
+    }
+    &::before {
+        content: "**";
+        padding-right: .5em;
+    }
+    text-align: center;
+    padding: 0 2em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width:499px) {
+    h1 {
+        text-align: center;
+    }
+    h2 {
+        padding: 0;
+    }
 }
