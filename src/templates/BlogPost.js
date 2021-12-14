@@ -30,6 +30,7 @@ const BlogPostTemplate = ({ data }) => {
                 </div>
                 </div>
                 <div id="post-title" className="col-2">
+                    <div className="post-category">{ data.post.categories.nodes[0].name }</div>
                     <h1>{ data.post.title }</h1>
                     <div className="mobile-hide" dangerouslySetInnerHTML={{__html: data.post.excerpt }} />
                 </div>
@@ -56,13 +57,17 @@ query($id: String!) {
       }
       featuredImage {
         node {
-            altText
-            localFile {
-                publicURL
-                childImageSharp {
-                    gatsbyImageData(formats: JPG, layout: FULL_WIDTH )
-                }
+          altText
+          localFile {
+            publicURL
+            childImageSharp {
+              gatsbyImageData(formats: JPG, layout: FULL_WIDTH)
+              fluid(maxWidth: 800) {
+                src
+                srcSet
+              }
             }
+          }
         }
       }
       categories {

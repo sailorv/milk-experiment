@@ -21,3 +21,21 @@
         }
     }
 }
+
+.wp-block-gallery.columns-3 li.blocks-gallery-item {
+    overflow-x: hidden;
+    align-items: stretch;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blocks-gallery-item .gatsby-image-wrapper img {
+    height: 100%;
+}
+
+.wp-block-gallery ul.blocks-gallery-grid li.blocks-gallery-item figure, .wp-block-gallery ul.blocks-gallery-grid li.blocks-gallery-item figure img {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: stretch;
+}
