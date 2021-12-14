@@ -18,7 +18,7 @@ const TaxonomyCloud = () => {
             </div>
             <div className="tag-cloud cut-corner">
                 <h3 style={{ marginBottom: `0`, }}>Tags</h3>
-                {new Array(3).fill("").map((element, i) => (
+                {new Array(9).fill("").map((element, i) => (
                     <a>
                         { taxonomy.wpgraphql.tags.edges[`${i}`].node.name }
                     </a>

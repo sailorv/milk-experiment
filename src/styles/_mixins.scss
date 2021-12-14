@@ -12,6 +12,7 @@
         border-right: 1px solid $green;
         transform: rotate(-135deg);
         background: repeating-linear-gradient(135deg, #000, #000 2px, #020 2px, #020 4px);;
+        z-index: 1;
     }
     &::before {
         content: "";
@@ -23,6 +24,7 @@
         border-right: 1px solid #0f0;
         transform: rotate(45deg);
         background: repeating-linear-gradient(-45deg, #000, #000 2px, #020 2px, #020 4px);
+        z-index: 1;
     }
     margin-bottom: 1.5em;
 }

@@ -12,11 +12,12 @@ const FeaturedPost = () => {
             {new Array(2).fill("").map((element, i) => (
                 <PostThumb 
                     key={i}
-                    title={ post.wpgraphql.posts.edges[`${i}`].node.title }
-                    excerpt={ post.wpgraphql.posts.edges[`${i}`].node.excerpt }
-                    uri={ post.wpgraphql.posts.edges[`${i}`].node.uri }
-                    category={ post.wpgraphql.posts.edges[`${i}`].node.categories.edges[0].node.name }
-                    image={ post.wpgraphql.posts.edges[`${i}`].node.featuredImage.node.sourceUrl }
+                    title={ post.allWpPost.edges[`${i}`].node.title }
+                    excerpt={ post.allWpPost.edges[`${i}`].node.excerpt }
+                    uri={ post.allWpPost.edges[`${i}`].node.uri }
+                    category={ post.allWpPost.edges[`${i}`].node.categories.nodes[0].name }
+                    image={ post.allWpPost.edges[`${i}`].node.featuredImage.node.localFile.publicURL }
+                    altText={ post.allWpPost.edges[`${i}`].node.featuredImage.node.altText }
                 />
             ))}   
          </div>

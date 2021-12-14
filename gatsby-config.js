@@ -45,14 +45,17 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: `http://milk-experiment.local/graphql`
+      }
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`VT323`,`Share Tech Mono`],
         display: `swap`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

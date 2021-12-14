@@ -16,7 +16,7 @@ const Header = ({ siteTitle }) => {
         display: `flex`,
       }}
     >
-      <div className="header-child">search</div>
+      <div className="header-child" style={{ visibility: `hidden`}}>search</div>
       <div id="site-title" className="header-child">
         <Link to="/">
           {siteTitle}
@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => {
         textAlign: `right`,
       }}
       >
-        <MenuIcon handleOverlayMenu={handleOverlayMenu} />
+        <div style={{ visibility: `hidden`}}></div>
       </div>
     </header>
   )

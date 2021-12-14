@@ -1,11 +1,15 @@
 import React from "react"
 import { Link } from 'gatsby'
 
-const PostThumb = ({ title, excerpt, uri, category, image }) => {
+
+
+const PostThumb = ({ title, excerpt, uri, category, image, altText }) => {
+    // const imageManip = getImage(image)
+
     return (
         <div className="post-thumb">
-            <div className="post-image animate-scanline">
-                <img src={ image } alt={ title } className="animate-twitch" />
+            <div className="post-image animate-scanline" style={{ maxHeight: `400px`, }}>
+                <img src={ image } alt={ altText } />
                 <div className="fade"></div>
                 <div className="green"></div>
             </div>
