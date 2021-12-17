@@ -47,7 +47,11 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `http://milk-experiment.local/graphql`
+        url: `http://milk-experiment.local/graphql`,
+        html: {
+          imageMaxWidth: 2000,
+          fallbackImageMaxWidth: 2000,
+        },
       }
     },
     {

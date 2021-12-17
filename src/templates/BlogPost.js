@@ -8,6 +8,16 @@ import Layout from "../components/Layout"
 const BlogPostTemplate = ({ data }) => {
 
     const image = getImage(data.post.featuredImage.node.localFile)
+
+    let categoryURI = data.post.categories.nodes[0].uri
+    let category = data.post.categories.nodes[0].name
+    let categorydesc
+    
+    if (categoryURI === "/category/sci-fi-adjacent/") {
+      categorydesc = ': ' + data.post.categories.nodes[0].description
+    } else {
+      categorydesc = ' '
+    }
     
     return (
         <Layout>
@@ -30,13 +40,15 @@ const BlogPostTemplate = ({ data }) => {
                 </div>
                 </div>
                 <div id="post-title" className="col-2">
-                    <div className="post-category" style={{textAlign:`left`}}>{ data.post.categories.nodes[0].name }</div>
+                    
+                  
+                    <div className="post-category" style={{textAlign:`left`}}>{ category } { categorydesc }</div>
                     <h1>{ data.post.title }</h1>
                     <div className="mobile-hide" dangerouslySetInnerHTML={{__html: data.post.excerpt }} />
                 </div>
             </section>
             
-            <div className="post-content" style={{maxWidth:`960px`, margin: `0 auto`,}} dangerouslySetInnerHTML={{ __html: data.post.content }} />
+            <div className="post-content" dangerouslySetInnerHTML={{ __html: data.post.content }} />
 
         </Layout>
         )
@@ -73,6 +85,7 @@ query($id: String!) {
       categories {
         nodes {
           name
+          description
           uri
         }
       }
