@@ -10,6 +10,7 @@
 
 body {
   background-color: #121;
+  overflow-x: hidden;
 }
 ::selection {
     background-color:green;
@@ -17,4 +18,27 @@ body {
 
 a {
   cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Share Tech Mono', monospace;
+  color: $green;
+  background: transparent;
+  padding: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  margin: 0 10px 10px 0;
+  outline:none;
+  border: 1px solid $green;
+  cursor: pointer;
+  
+  &:hover {
+    background: repeating-linear-gradient(0deg, #0c0, #0c0 1px, #050 1px, #050 2px);
+    color: #000;
+    border: 1px solid transparent;
+    box-shadow: 0 0 40px #0A0, inset 0 0 40px #0A0;
+  }
 }

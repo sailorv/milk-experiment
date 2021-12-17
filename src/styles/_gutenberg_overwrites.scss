@@ -1,4 +1,16 @@
+/* Blog posts */
+.post-content {
+    p, blockquote {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .wp-block-gallery {
+    max-width: 70%;
+    margin: 0 auto;
+
     ul.blocks-gallery-grid {
         list-style: none;
         margin: 0;

@@ -13,8 +13,6 @@
 - 🚀 Designed to look like an 80s computer terminal
 
 ## To-do list
-- 🚀 Hook up NASA APOD to API
 - 🚀 Build category pages
 - 🚀 Search
 - 🚀 About page
-- 🚀 Image styling on blog posts

@@ -1,3 +1,7 @@
+footer {
+    clear: both;
+}
+
 hr {
     position: relative;
     height: fit-content;
@@ -92,5 +96,40 @@ blockquote.wp-block-quote, blockquote {
 }
 
 .tag-cloud a:hover, .categories a:hover {
-    text-decoration: underline;
 }
+
+.links {
+    ul {
+        list-style: none;
+        font-family: "Share Tech Mono", sans-serif
+    }
+    li {
+        list-style: none;
+        a {
+            text-transform: none;
+            text-decoration: none;
+            &:before {
+                content: "> ";
+            }
+        }
+    }
+}
+
+/* Bytes */
+.post-byte {
+    clear: both;
+    margin-bottom: 2em;
+}
+// .post-byte {
+//     width: calc(50% - 2em);
+//     border: solid 1px;
+//     padding: 1em;
+//     margin: 1em;
+//     box-sizing: border-box !important;
+// }
+
+// .bytes-wrapper {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+// }

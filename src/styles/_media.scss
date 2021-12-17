@@ -48,6 +48,9 @@ figure.wp-block-image.size-large {
     padding: 0;
     position: relative;
     display: flex;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
     @include cut-corner;
     img {
         margin-bottom: 0;
@@ -82,5 +85,20 @@ figure.wp-block-image.size-large {
             position: relative;
             max-width: 100%;
         }
+    }
+}
+
+/* Floated images */
+figure.wp-block-gallery.alignright {
+    float: right;
+    margin-left: 2em;
+    width: calc(((100vw - 960px) / 2) - 4em);
+    @include cut-corner;
+    background-color: transparent;
+    .blocks-gallery-item {
+        margin-bottom: 0;
+        height: auto;
+    }
+    img {
     }
 }
