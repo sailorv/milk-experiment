@@ -49,6 +49,7 @@ const HomeDashboard = () => {
                     <li><a href="https://podcasts.apple.com/us/podcast/the-ezra-klein-show/id1548604447?i=1000515001051">Podcast interview with Ted Chiang by Ezra Klein</a></li>
                     <li><a href="https://www.syfy.com/syfy-wire/spacetime-shakes-for-the-first-time-astronomers-see-a-black-hole-eating-a-neutron-star">Spacetime shakes: For the first time, astronomers see a black hole eating a neutron star</a></li>
                     <li><a href="http://www.nausicaa.net/miyazaki/interviews/afternausicaa.html">Interview with Hayao Miyazaki on <em>Nausicaä</em>, from <em>Yom</em> magazine, 1994 </a></li>
+                    <li><a href="http://www.isfdb.org/">The Internet Speculative Fiction Database</a></li>
                 </ul>
                 </div>
             </div>
