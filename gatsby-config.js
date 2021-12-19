@@ -41,13 +41,13 @@ module.exports = {
       options: {
         typeName: `WPGraphQL`,
         fieldName: `wpgraphql`,
-        url: `https://dev-milk-experiment.pantheonsite.io/graphql`
+        url: `https://live-milk-experiment.pantheonsite.io/graphql`
       }
     },
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `hhttps://dev-milk-experiment.pantheonsite.io/graphql`,
+        url: `https://live-milk-experiment.pantheonsite.io/graphql`,
         html: {
           imageMaxWidth: 2000,
           fallbackImageMaxWidth: 2000,
