@@ -116,20 +116,72 @@ blockquote.wp-block-quote, blockquote {
 }
 
 /* Bytes */
-.post-byte {
-    clear: both;
-    margin-bottom: 2em;
+.bytes-page {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3em;
+    grid-column-gap: 1em;
+    .post-byte {
+        box-sizing: border-box;
+        height: 100%;
+        padding-bottom: 2em;
+        .post-byte-content {
+            height: inherit;
+            border: solid 1px $green;
+            padding: 10px;
+            a.button.purchase {
+                position: absolute;
+                bottom: -10px;
+                border-bottom: 0;
+                right: -10px;
+                border-right: 0;
+                width: max-content;
+            }
+        }
+        h3 {
+            background-color: green;
+            display: block;
+            padding: 10px;
+            clip-path: polygon(0 0, 94% 0%, 100% 100%, 0% 100%);
+            width: 90%;
+        }
+    }
 }
-// .post-byte {
-//     width: calc(50% - 2em);
-//     border: solid 1px;
-//     padding: 1em;
-//     margin: 1em;
-//     box-sizing: border-box !important;
-// }
+@media (max-width: 1200px) {
+    .bytes-page {
+        grid-template-columns: repeat(2, 1fr);
+        .post-byte {
+            .post-byte-content {
+                a.button.purchase {
+                    position:relative;
+                    margin: 0 auto;
+                    width: 100%;
+                    bottom: 0;
+                    right: auto;
+                    border-right: solid 1px;
+                    border-bottom: solid 1px;
+                    margin-top: 20px;
+                }
+            }
+         }
+    }
+}
 
-// .bytes-wrapper {
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-// }
+@media (max-width: 600px) {
+    .bytes-page {
+        display: block;
+        .post-byte {
+            .post-byte-content {
+                a.button.purchase {
+                    position:relative;
+                    margin: 0 auto;
+                    width: 100%;
+                    bottom: 0;
+                    right: auto;
+                    border-right: solid 1px;
+                    border-bottom: solid 1px;
+                }
+            }
+         }
+    }
+}

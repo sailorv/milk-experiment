@@ -4,7 +4,7 @@ export const useLatestBlogPosts = () => {
     const data = useStaticQuery(graphql`
     query LatestBlogPostQuery {
 
-      allWpPost(sort: {fields: date, order: DESC}, filter: {categories: {nodes: {elemMatch: {slug: {nin: "sci-fi-adjacent"}}}}}) {
+      allWpPost(sort: {fields: date, order: DESC}, filter: {categories: {nodes: {elemMatch: {slug: {ne: "bytes", nin: "sci-fi-adjacent"}}}}}) {
         edges {
           node {
             title

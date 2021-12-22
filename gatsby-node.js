@@ -24,19 +24,19 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
-        posts {
-          edges {
-            node {
-              uri
-              id
-            }
+      }
+      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {nin: "bytes"}}}}}) {
+        edges {
+          node {
+            id
+            uri
           }
         }
       }
-    }
+    }  
   `)
   
-  const BlogPosts = result.data.wpgraphql.posts.edges
+  const BlogPosts = result.data.allWpPost.edges
   const Categories = result.data.wpgraphql.categories.edges
 
   BlogPosts.forEach(post => {

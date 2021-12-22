@@ -48,6 +48,9 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: `https://live-milk-experiment.pantheonsite.io/graphql`,
+        schema: {
+          perPage: 20,
+        },
         html: {
           imageMaxWidth: 2000,
           fallbackImageMaxWidth: 2000,

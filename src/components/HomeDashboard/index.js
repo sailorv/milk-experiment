@@ -3,7 +3,6 @@ import React from "react"
 import FeaturedPost from "../FeaturedPost"
 import LatestBlogPosts from "../LatestBlogPosts"
 import TaxonomyCloud from "../TaxonomyCloud"
-import Apod from "../Apod"
 import SciFiAdjacentPosts from "../SciFiAdjacentPosts"
 import Byte from "../Byte"
 import { Link } from "gatsby"
@@ -25,7 +24,7 @@ const HomeDashboard = () => {
                 <div className="bytes-wrapper">
                     <Byte title="Binti" author="Nnedi Okorafor" 
                     image="https://i.pinimg.com/564x/cd/d9/5a/cdd95a513dbc63203ffe4006af9820cb.jpg"
-                    excerpt={`Winner of the Hugo and Nebula awards. Binti is so moving and so exciting that it's impossible to put down. In fact, I was downright sad to finish this trilogy - I would follow Binti's story through all of spacetime. Ursula K. Le Guin says it best: "There's more vivid imagination in a page of Nnedi Okorafor\’s work than in whole volumes of ordinary fantasy epics."`} />
+                    excerpt={`Winner of the Hugo and Nebula awards. Binti is so moving and so exciting that it's impossible to put down. In fact, I was downright sad to finish this trilogy - I would follow Binti's story through all of spacetime. Ursula K. Le Guin says it best: "There's more vivid imagination in a page of Nnedi Okorafor's work than in whole volumes of ordinary fantasy epics."`} />
                     
                     <div style={{ display: `flex`, clear: `both`, width: `100%`, flexDirection: `row`, alignContent: `center` }}>
                         <p style={{ margin: 0}}>BYTES are micro-reviews of our recommended books.</p>
