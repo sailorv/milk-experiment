@@ -101,10 +101,12 @@ blockquote.wp-block-quote, blockquote {
 .links {
     ul {
         list-style: none;
-        font-family: "Share Tech Mono", sans-serif
+        font-family: "Share Tech Mono", sans-serif;
+        margin: 0;
     }
     li {
         list-style: none;
+        margin: 0;
         a {
             text-transform: none;
             text-decoration: none;
