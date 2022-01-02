@@ -14,7 +14,7 @@ const BytesPage = () => {
             <p>BYTES are micro-reviews of our recommended books.</p>
             <div className="bytes-page">
             
-            {new Array(7).fill("").map((element, i) => (
+            {new Array(11).fill("").map((element, i) => (
                 
                 <Byte 
                     key={i}
