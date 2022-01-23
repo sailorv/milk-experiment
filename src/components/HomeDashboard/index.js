@@ -23,30 +23,21 @@ const HomeDashboard = () => {
                 "So nobody'll drink it."</p>
                 <p style={{ textAlign: `right`, }}> &mdash; <em>Virtual Light</em> by William Gibson</p>
                 <TaxonomyCloud />
-                <h2>Bytes</h2>
-{/* <pre style={{whiteSpace:   `pre`, fontFamily: 'monospace'}}>
-{`
-     __          __           
-    / /_  __  __/ /____  _____
-   / __ \/ / / / __/ _ \/ ___/
-  / /_/ / /_/ / /_/  __(__  ) 
- /_.___/\__, /\__/\___/____/  
-       /____/                 
-`}
-</pre>         */}
-                <p>BYTES are micro-reviews of our recommended books.</p>
                 <div className="bytes-wrapper">
-                    {new Array(1).fill("").map((element, i) => (
-                        <Byte 
-                            key={i}
-                            title={ bytes.allWpPost.edges[7].node.title }
-                            author={ bytes.allWpPost.edges[7].node.bytesFields.bytesBookAuthor }
-                            excerpt={ bytes.allWpPost.edges[7].node.content }
-                            pub={ bytes.allWpPost.edges[7].node.bytesFields.bytesDate }
-                        />
-                    ))} 
+                    <h2>Bytes</h2>
+                    <p>BYTES are micro-reviews of our recommended books.</p>
+                    
+                        {new Array(1).fill("").map((element, i) => (
+                            <Byte 
+                                key={i}
+                                title={ bytes.allWpPost.edges[7].node.title }
+                                author={ bytes.allWpPost.edges[7].node.bytesFields.bytesBookAuthor }
+                                excerpt={ bytes.allWpPost.edges[7].node.content }
+                                pub={ bytes.allWpPost.edges[7].node.bytesFields.bytesDate }
+                            />
+                        ))} 
+                    <a href="/bytes" class="button">See all bytes</a>
                 </div>
-                <a href="/bytes" class="button">See all bytes</a>
             </div>
             <div className="col-3">
                 <FeaturedPost />

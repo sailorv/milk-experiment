@@ -54,6 +54,12 @@ blockquote.wp-block-quote, blockquote {
     padding: .5em;
 }
 
+@media only screen and (min-width: 901px) {
+    .col-wrapper {
+        display: flex;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .col-2, .col-3 {
         width: 100%;

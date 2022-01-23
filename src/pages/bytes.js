@@ -8,13 +8,20 @@ const BytesPage = () => {
 
     const bytes = useBytes()
 
+    const totalBytes = bytes.allWpPost.totalCount
+
     return (
         <Layout>
-            <h1>Bytes</h1>
-            <p>BYTES are micro-reviews of our recommended books.</p>
+            <div style={{textAlign: `center`}}><pre style={{display: `inline-block`, marginBottom: `0`}}>{`     __          __           
+    / /_  __  __/ /____  _____
+   / __ \\/ / / / __/ _ \\/ ___/
+  / /_/ / /_/ / /_/  __(__  ) 
+ /_.___/\\__, /\\__/\\___/____/  
+       /____/                 `}</pre></div>
+            <p style={{textAlign: `center`, marginBottom: `2em`}}>BYTES are micro-reviews of our recommended books.</p>
             <div className="bytes-page">
             
-            {new Array(11).fill("").map((element, i) => (
+            {new Array(totalBytes).fill("").map((element, i) => (
                 
                 <Byte 
                     key={i}

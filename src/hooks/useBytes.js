@@ -22,6 +22,7 @@ export const useBytes = () => {
               }
             }
           }
+          totalCount
         }
       }
     `)

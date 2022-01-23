@@ -42,7 +42,7 @@ const BlogPostTemplate = ({ data }) => {
                 <div id="post-title" className="col-2">
                     
                   
-                    <div className="post-category" style={{textAlign:`left`}}>{ category } { categorydesc }</div>
+                    <div className="post-category">{ category } { categorydesc }</div>
                     <h1>{ data.post.title }</h1>
                     <div className="mobile-hide" dangerouslySetInnerHTML={{__html: data.post.excerpt }} />
                 </div>
