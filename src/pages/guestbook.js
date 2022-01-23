@@ -3,7 +3,7 @@ import React from "react"
 import { useComments } from "../hooks/useComments"
 
 import Layout from "../components/Layout"
-import Seo from "../components/Seo"
+import Seo from "../components/SEO"
 
 const GuestbookPage = () => {
 
