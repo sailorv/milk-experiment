@@ -1,13 +1,17 @@
 import React from "react"
 
+import { useBytes } from "../../hooks/useBytes"
+
 import FeaturedPost from "../FeaturedPost"
 import LatestBlogPosts from "../LatestBlogPosts"
 import TaxonomyCloud from "../TaxonomyCloud"
 import SciFiAdjacentPosts from "../SciFiAdjacentPosts"
 import Byte from "../Byte"
-import { Link } from "gatsby"
 
 const HomeDashboard = () => {
+
+    const bytes = useBytes()
+
     return (
         <div style={{display: "flex", flexWrap: "wrap"}}>
             <div className="col-3 mobile-last">
@@ -19,19 +23,30 @@ const HomeDashboard = () => {
                 "So nobody'll drink it."</p>
                 <p style={{ textAlign: `right`, }}> &mdash; <em>Virtual Light</em> by William Gibson</p>
                 <TaxonomyCloud />
-                
                 <h2>Bytes</h2>
+{/* <pre style={{whiteSpace:   `pre`, fontFamily: 'monospace'}}>
+{`
+     __          __           
+    / /_  __  __/ /____  _____
+   / __ \/ / / / __/ _ \/ ___/
+  / /_/ / /_/ / /_/  __(__  ) 
+ /_.___/\__, /\__/\___/____/  
+       /____/                 
+`}
+</pre>         */}
+                <p>BYTES are micro-reviews of our recommended books.</p>
                 <div className="bytes-wrapper">
-                    <Byte title="Binti" author="Nnedi Okorafor" 
-                    image="https://i.pinimg.com/564x/cd/d9/5a/cdd95a513dbc63203ffe4006af9820cb.jpg"
-                    excerpt={`Winner of the Hugo and Nebula awards. Binti is so moving and so exciting that it's impossible to put down. In fact, I was downright sad to finish this trilogy - I would follow Binti's story through all of spacetime. Ursula K. Le Guin says it best: "There's more vivid imagination in a page of Nnedi Okorafor's work than in whole volumes of ordinary fantasy epics."`} />
-                    
-                    <div style={{ display: `flex`, clear: `both`, width: `100%`, flexDirection: `row`, alignContent: `center` }}>
-                        <p style={{ margin: 0}}>BYTES are micro-reviews of our recommended books.</p>
-                        <Link className="button" style={{ width: `30%` }} to="/bytes">See all bytes</Link>
-                    </div>
-
+                    {new Array(1).fill("").map((element, i) => (
+                        <Byte 
+                            key={i}
+                            title={ bytes.allWpPost.edges[7].node.title }
+                            author={ bytes.allWpPost.edges[7].node.bytesFields.bytesBookAuthor }
+                            excerpt={ bytes.allWpPost.edges[7].node.content }
+                            pub={ bytes.allWpPost.edges[7].node.bytesFields.bytesDate }
+                        />
+                    ))} 
                 </div>
+                <a href="/bytes" class="button">See all bytes</a>
             </div>
             <div className="col-3">
                 <FeaturedPost />

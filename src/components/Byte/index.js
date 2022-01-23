@@ -17,6 +17,13 @@ const Byte = ({ title, author, image, excerpt, purchaseLink, pub, related }) => 
         relatedLink = null
     }
 
+    let purchaseBookLink
+    if (purchaseLink != null) {
+        purchaseBookLink = <a href={ purchaseLink } target="_blank" className="button purchase">Purchase this book</a>
+    } else {
+        purchaseBookLink = null
+    }
+
     return (
         <div className="post-byte">
             { renderImage }
@@ -25,8 +32,7 @@ const Byte = ({ title, author, image, excerpt, purchaseLink, pub, related }) => 
                 <div>by { author }, pub. { pub }</div>
                 <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
                 { relatedLink }
-                <a href={ purchaseLink } target="_blank" className="button purchase">Purchase this book</a>
-                
+                { purchaseBookLink }
             </div>
         </div>
     )
