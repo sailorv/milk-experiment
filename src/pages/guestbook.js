@@ -18,12 +18,12 @@ const GuestbookPage = () => {
         <div className="col-wrapper">
             <div className="col-2">
                 <iframe src="https://live-milk-experiment.pantheonsite.io/guestbook/" style={{
-                    height: `400px`,
+                    height: `460px`,
                     border: `0`,
                     width: `100%`,
                     overflow: `hidden`,
                 }}
-                scrolling="no"
+                // scrolling="no"
                 ></iframe>
             </div>
 
