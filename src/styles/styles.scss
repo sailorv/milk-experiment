@@ -42,3 +42,40 @@ button {
     box-shadow: 0 0 40px #0A0, inset 0 0 40px #0A0;
   }
 }
+
+
+/* PROMO STYLES */
+
+#page-header {
+  font-size: 2em;
+  text-align: center;
+}
+
+#page-title {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 300px;
+  animation: type2 5s steps(24, end); 
+  display: inline-block;
+}
+
+.cursor {
+    -webkit-animation: blink 1s step-start infinite;
+    animation: blink 1s step-start infinite;
+    background-color: lime;
+    display: inline-block;
+    font-size: inherit;
+    height: 25px;
+    overflow: hidden;
+    width: 10px;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
