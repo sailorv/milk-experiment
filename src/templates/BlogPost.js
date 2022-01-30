@@ -8,6 +8,7 @@ import Layout from "../components/Layout"
 const BlogPostTemplate = ({ data }) => {
 
     const image = getImage(data.post.featuredImage.node.localFile)
+    const imageURL = data.post.featuredImage.node.localFile.publicURL
 
     let categoryURI = data.post.categories.nodes[0].uri
     let category = data.post.categories.nodes[0].name
@@ -34,7 +35,7 @@ const BlogPostTemplate = ({ data }) => {
             >
                 <div id="post-image" className="col-2">
                 <div className="post-image animate-scanline">
-                    <GatsbyImage image={ image } alt={ data.post.featuredImage.node.altText } />
+                    <img src={ imageURL } alt={ data.post.featuredImage.node.altText } />
                     <div class="fade"></div>
                     <div class="green"></div>
                 </div>
