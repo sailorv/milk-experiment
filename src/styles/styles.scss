@@ -57,6 +57,10 @@ button {
   width: 300px;
   animation: type2 5s steps(24, end); 
   display: inline-block;
+  line-height: 1;
+}
+#page-title.coming-soon {
+  animation: type2 4s steps(12, end);
 }
 
 .cursor {
