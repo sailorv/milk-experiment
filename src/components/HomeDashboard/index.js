@@ -8,6 +8,8 @@ import TaxonomyCloud from "../TaxonomyCloud"
 import SciFiAdjacentPosts from "../SciFiAdjacentPosts"
 import Byte from "../Byte"
 
+import moon from "../../images/moon-phases-moon.gif"
+
 const HomeDashboard = () => {
 
     const bytes = useBytes()
@@ -77,7 +79,24 @@ const HomeDashboard = () => {
                 </div>
             </div>
             <div className="col-3">
-
+                <div className="moonphases post-image" style={{width: `fit-content`, margin: `0 auto`}}>
+                    <div className="animate-flicker"><img src={ moon } alt="moon phases" style={{height: `215px`, width: `auto`}} className="animate-twitch" /></div>
+                    <div className="green"></div>
+                    <div className="fade" style={{ background: `radial-gradient(rgba(0, 0, 0, 0.2), black 100%)` }}></div>
+                    <div class="moon-caption" style={{
+                            position: `absolute`,
+                            top: `50%`,
+                            left: `50%`,
+                            width: `100%`,
+                            transform: `translate(-50%, -50%)`
+                    }}>
+                        <p>
+                            Moon phase: New Moon<br />
+                            Time until full moon: 28 days<br />
+                            Illumination: 0%
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         </>
