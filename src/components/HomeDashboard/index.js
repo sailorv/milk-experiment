@@ -84,7 +84,7 @@ const HomeDashboard = () => {
                     </ul>
                 </div>
             </div>
-            <div className="col-3">
+            <div className="col-3 mobile-hide">
                 <div className="moonphases post-image scanline-vertical" style={{width: `fit-content`, margin: `0 auto`}}>
                     <div className="animate-flicker"><img src={ moon } alt="moon phases" style={{height: `215px`, width: `auto`}} className="animate-twitch" /></div>
                     <div className="green"></div>
