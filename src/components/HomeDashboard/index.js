@@ -17,7 +17,9 @@ const HomeDashboard = () => {
     return (
         <>
         <div style={{display: "flex", flexWrap: "wrap"}}>
-            <div className="col-3 mobile-last">
+            <div className="col-3 mobile-last" style={{ display: `flex`, flexDirection: `column` }}>
+                <div className="intro">
+
                 <h2>Metadata</h2>
                 <p>Rydell got his bag of cornflakes out of the cupboard and carefully unrolled it. About enough for a bowl. He opened the fridge and took out a plastic, snap-top, liter container with a strip of masking-tape across the side. He'd written <strong>MILK EXPERIMENT</strong> on the masking-tape with a heavy marker.</p>
                 <p>"What's that?" Hernandez asked.<br />
@@ -25,10 +27,14 @@ const HomeDashboard = () => {
                 "So why's it say 'experiment'?"<br />
                 "So nobody'll drink it."</p>
                 <p style={{ textAlign: `right`, }}> &mdash; <em>Virtual Light</em> by William Gibson</p>
+
+                </div>
+                
                 <TaxonomyCloud />
-                <div className="bytes-wrapper">
+
+                <div className="bytes-wrapper mobile-first">
                     <h2>Bytes</h2>
-                    <p>BYTES are micro-reviews of our recommended books.</p>
+                    <p>BYTES are concise reviews of our recommended books.</p>
                     
                         {new Array(1).fill("").map((element, i) => (
                             <Byte 
@@ -39,7 +45,7 @@ const HomeDashboard = () => {
                                 pub={ bytes.allWpPost.edges[7].node.bytesFields.bytesDate }
                             />
                         ))} 
-                    <a href="/bytes" class="button">See all bytes</a>
+                    <a href="/bytes" className="button">See all bytes</a>
                 </div>
             </div>
             <div className="col-3">
@@ -68,7 +74,7 @@ const HomeDashboard = () => {
                 `}</pre></a>
             </div>
             <div className="col-3">
-                <div class="links">
+                <div className="links">
                     <h2>Links</h2>
                     <ul>
                         <li><a href="https://podcasts.apple.com/us/podcast/the-ezra-klein-show/id1548604447?i=1000515001051">Podcast interview with Ted Chiang by Ezra Klein</a></li>
@@ -79,11 +85,11 @@ const HomeDashboard = () => {
                 </div>
             </div>
             <div className="col-3">
-                <div className="moonphases post-image" style={{width: `fit-content`, margin: `0 auto`}}>
+                <div className="moonphases post-image scanline-vertical" style={{width: `fit-content`, margin: `0 auto`}}>
                     <div className="animate-flicker"><img src={ moon } alt="moon phases" style={{height: `215px`, width: `auto`}} className="animate-twitch" /></div>
                     <div className="green"></div>
                     <div className="fade" style={{ background: `radial-gradient(rgba(0, 0, 0, 0.2), black 100%)` }}></div>
-                    <div class="moon-caption" style={{
+                    <div className="moon-caption" style={{
                             position: `absolute`,
                             top: `50%`,
                             left: `50%`,
@@ -92,7 +98,7 @@ const HomeDashboard = () => {
                     }}>
                         <p>
                             Moon phase: New Moon<br />
-                            Time until full moon: 28 days<br />
+                            Time until full moon: 15 days<br />
                             Illumination: 0%
                         </p>
                     </div>

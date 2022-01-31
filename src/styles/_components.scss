@@ -73,6 +73,10 @@ blockquote.wp-block-quote, blockquote {
     .col-3.mobile-last {
         order: 3;
     }
+    .mobile-first {
+        order: -1;
+        margin-bottom: 1em;
+    }
 }
 
 /* Site Header */
