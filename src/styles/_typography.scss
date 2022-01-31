@@ -69,10 +69,12 @@ h2 {
     font-weight: bold;
 }
 
-.post-content h2 {
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+@media only screen and (min-width: 900px) {
+    .post-content h2 {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .post-content ol {
