@@ -90,7 +90,11 @@ blockquote.wp-block-quote, blockquote {
     -webkit-animation: blink 1s step-start infinite;
     animation: blink 1s step-start infinite;
     font-size: 2em;
-    margin: 0 0 0 5px;
+    position: relative;
+    top: 3px;
+    left: 5px;
+    line-height: .8;
+    overflow: hidden;
 }
 
 /* Tags and Categories */
