@@ -102,7 +102,7 @@ button, a.button {
     text-decoration: none;
     
     &:hover {
-      background: repeating-linear-gradient(0deg, #0c0, #0c0 1px, #050 1px, #050 2px);
+      @include repeating-line-background;
       color: #000;
       border: 1px solid transparent;
       box-shadow: 0 0 40px #0A0, inset 0 0 40px #0A0;
@@ -110,7 +110,7 @@ button, a.button {
   }
 
   .bytes-wrapper h2 {
-      background: repeating-linear-gradient(0deg, #0c0, #0c0 1px, #050 1px, #050 2px);
+    @include repeating-line-background;
       color: #000;
       text-shadow: 0 0 3px green, 0 0 5px green, 0 0 10px green;
   }

@@ -46,3 +46,7 @@
     }
     margin-bottom: 1.5em;
 }
+
+@mixin repeating-line-background {
+    background: repeating-linear-gradient(0deg, $green, $green 1px, #050 1px, #050 2px)
+}

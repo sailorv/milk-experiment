@@ -7,7 +7,7 @@ hr {
     height: fit-content;
     color: $green;
     border-color: $green;
-    background: repeating-linear-gradient(0deg, #0c0, #0c0 1px, #050 1px, #050 2px);
+    @include repeating-line-background;
     &:after {
         content: "✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱✱";
         position: relative;
@@ -215,7 +215,7 @@ a.guestbook pre {
     background-color: transparent;
 }
 a:hover.guestbook {
-    background: repeating-linear-gradient(0deg, #0c0, #0c0 1px, #050 1px, #050 2px);
+    @include repeating-line-background;
     color: #000;
     box-shadow: 0 0 40px #0a0, inset 0 0 40px #0a0;
 }
