@@ -85,13 +85,13 @@ figure.wp-block-image.size-large, figure.wp-block-image.size-full {
 }
 
 @media only screen and (max-width: 700px) {
-    figure.wp-block-image.size-large figcaption {
+    figure.wp-block-image.size-large figcaption, figure.wp-block-image.size-full figcaption {
         max-width: 70%;
     }
 }
 
 @media only screen and (max-width: 499px) {
-    figure.wp-block-image.size-large {
+    figure.wp-block-image.size-large, figure.wp-block-image.size-full {
         display: block;
         figcaption {
             position: relative;
@@ -110,7 +110,5 @@ figure.wp-block-gallery.alignright {
     .blocks-gallery-item {
         margin-bottom: 0;
         height: auto;
-    }
-    img {
     }
 }
