@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Milk Experiment`,
-    description: `http://localhost:8000/`,
+    description: `Milk Experiment: science fiction thoughts blasted into the void`,
     author: `@sailorv`,
     siteUrl: `https://www.sailorven.us`,
   },
