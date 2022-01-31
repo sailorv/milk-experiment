@@ -99,7 +99,7 @@ const HomeDashboard = () => {
                     }}>
                         <p>
                             Moon phase: New Moon<br />
-                            Time until full moon: 15 days<br />
+                            Time until full moon: 16 days<br />
                             Illumination: 0%
                         </p>
                     </div>
