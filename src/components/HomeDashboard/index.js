@@ -34,7 +34,6 @@ const HomeDashboard = () => {
 
                 <div className="bytes-wrapper mobile-first">
                     <h2>Bytes</h2>
-                    <p>BYTES are concise reviews of our recommended books.</p>
                     
                         {new Array(1).fill("").map((element, i) => (
                             <Byte 
@@ -54,6 +53,8 @@ const HomeDashboard = () => {
             <div className="col-3">
                 <h2>Further Reading</h2>
                 <LatestBlogPosts />
+
+                <hr />
 
                 <SciFiAdjacentPosts />
 

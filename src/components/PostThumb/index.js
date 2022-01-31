@@ -8,7 +8,7 @@ const PostThumb = ({ title, excerpt, uri, category, image, altText }) => {
 
     return (
         <div className="post-thumb">
-            <div className="post-image animate-scanline" style={{ maxHeight: `350px`, }}>
+            <div className="post-image animate-scanline" style={{ maxHeight: `300px`, }}>
                 <img src={ image } alt={ altText } />
                 <div className="fade"></div>
                 <div className="green"></div>
