@@ -98,9 +98,9 @@ const HomeDashboard = () => {
                             transform: `translate(-50%, -50%)`
                     }}>
                         <p>
-                            Moon phase: New Moon<br />
-                            Time until full moon: 16 days<br />
-                            Illumination: 0%
+                            Moon phase: Waxing Crescent<br />
+                            Time until full moon: 14 days<br />
+                            Illumination: 3%
                         </p>
                     </div>
                 </div>
