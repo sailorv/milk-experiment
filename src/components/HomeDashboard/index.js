@@ -99,8 +99,8 @@ const HomeDashboard = () => {
                     }}>
                         <p>
                             Moon phase: Waxing Crescent<br />
-                            Time until full moon: 14 days<br />
-                            Illumination: 3%
+                            Time until full moon: 13 days<br />
+                            Illumination: 7%
                         </p>
                     </div>
                 </div>
