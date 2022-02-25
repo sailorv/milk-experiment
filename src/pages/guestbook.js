@@ -1,4 +1,5 @@
 import React from "react"
+import { useState, useEffect } from "react"
 
 import { useComments } from "../hooks/useComments"
 
@@ -10,22 +11,39 @@ const GuestbookPage = () => {
     const entry = useComments()
     const entryNum = entry.allWpPage.edges[0].node.commentCount
 
+    const [loading, stillLoading] = useState(true)
+    const finishLoading = () => {
+        stillLoading(false)
+    }
+
+    useEffect(() => {
+        stillLoading(false)
+    }, [])
+
     return (
         <Layout>
             <Seo title="Guestbook" />
             <h1>Guestbook</h1>
 
         <div className="col-wrapper">
-            <div className="col-2">
-                <iframe src="https://live-milk-experiment.pantheonsite.io/guestbook/" style={{
-                    height: `480px`,
-                    border: `0`,
-                    width: `100%`,
-                    overflow: `hidden`,
-                }}
-                scrolling="no"
-                ></iframe>
-            </div>
+            {loading ? 'Loading...' :
+                <div className="col-2" style={{position: `relative`}}>
+                        <iframe id="guestbook" 
+                        title="Sign the Guestbook"
+                        src="https://live-milk-experiment.pantheonsite.io/guestbook/"
+
+                        onLoad={ finishLoading }
+                        
+                        style={{
+                            height: `480px`,
+                            border: `0`,
+                            width: `100%`,
+                            overflow: `hidden`,
+                        }}
+                        scrolling="no"
+                        ></iframe>
+                </div>
+            }
 
             <div className="col-2">
                 {new Array(entryNum).fill("").map((element, i) => (
