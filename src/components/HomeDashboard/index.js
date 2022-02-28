@@ -53,8 +53,6 @@ const HomeDashboard = () => {
                 <h2>Further Reading</h2>
                 <LatestBlogPosts />
 
-                <hr />
-
                 <SciFiAdjacentPosts />
 
             </div>
