@@ -17,10 +17,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-plugin-sass',
+      resolve: "gatsby-plugin-sass",
       options: {
         sassOptions: {
-          includePaths: ["./src/styles/_variables.scss", ".src/styles/styles.scss"],
+          includePaths: [
+            "./src/styles/_variables.scss",
+            ".src/styles/styles.scss",
+          ],
         },
       },
     },
@@ -41,8 +44,8 @@ module.exports = {
       options: {
         typeName: `WPGraphQL`,
         fieldName: `wpgraphql`,
-        url: `https://live-milk-experiment.pantheonsite.io/graphql`
-      }
+        url: `https://live-milk-experiment.pantheonsite.io/graphql`,
+      },
     },
     {
       resolve: `gatsby-source-wordpress`,
@@ -55,21 +58,19 @@ module.exports = {
           imageMaxWidth: 2000,
           fallbackImageMaxWidth: 2000,
         },
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`VT323`,`Share Tech Mono`],
+        fonts: [`VT323`, `Share Tech Mono`],
         display: `swap`,
       },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          "G-X37VDV5JQ8",
-        ],
+        trackingIds: ["G-X37VDV5JQ8"],
         gtagConfig: {
           optimize_id: "OPT_CONTAINER_ID",
           anonymize_ip: true,

@@ -1,13 +1,16 @@
 import React from "react"
 
-import "../styles/styles.scss"
-
-
 const BytesPage = () => {
-
-    return (
-<div className="animate-scanline animate-twitch">
-<pre style={{lineHeight: `1.2`, fontFamily: `monospace`, width: `fit-content`, margin: `0 auto`}}>{`
+  return (
+    <div className="animate-scanline animate-twitch">
+      <pre
+        style={{
+          lineHeight: `1.2`,
+          fontFamily: `monospace`,
+          width: `fit-content`,
+          margin: `0 auto`,
+        }}
+      >{`
                                             .---------\`                                                                                                                                 
                                    ..--.\`        .://:\`                                                                                                                             
                                 .-.             ... \`\`::.                                                                                                                           
@@ -76,8 +79,8 @@ const BytesPage = () => {
               \`\`.--::---.    :--y-          :/:-  .:/- \`:sds.+dsys+/s\`                                                      \`-oo//::-..\`              \`....--.--\`\`..---:/.-..+      
                         \`:-   :\`/+\`                        .//+.                                                       ----..    \`.-:/++o+:////-.-:-.:::++oo++osss+////--/::o.    
 `}</pre>
-</div>
-    )
+    </div>
+  )
 }
 
 export default BytesPage

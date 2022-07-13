@@ -25,7 +25,11 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allWpPost(filter: {categories: {nodes: {elemMatch: {slug: {nin: "bytes"}}}}}) {
+      allWpPost(
+        filter: {
+          categories: { nodes: { elemMatch: { slug: { nin: "bytes" } } } }
+        }
+      ) {
         edges {
           node {
             id
@@ -33,9 +37,9 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-    }  
+    }
   `)
-  
+
   const BlogPosts = result.data.allWpPost.edges
   const Categories = result.data.wpgraphql.categories.edges
 
@@ -44,7 +48,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/blog${post.node.uri}`,
       component: BlogPostTemplate,
       context: {
-        id: `${post.node.id}`
+        id: `${post.node.id}`,
       },
     })
   })
@@ -53,7 +57,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `${category.node.uri}`,
       component: CategoryTemplate,
       context: {
-        id: `${category.node.id}`
+        id: `${category.node.id}`,
       },
     })
   })

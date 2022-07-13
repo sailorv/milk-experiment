@@ -1,10 +1,18 @@
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby"
 
 export const useLatestBlogPosts = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query LatestBlogPostQuery {
-
-      allWpPost(sort: {fields: date, order: DESC}, filter: {categories: {nodes: {elemMatch: {slug: {ne: "bytes", nin: "sci-fi-adjacent"}}}}}) {
+      allWpPost(
+        sort: { fields: date, order: DESC }
+        filter: {
+          categories: {
+            nodes: {
+              elemMatch: { slug: { ne: "bytes", nin: "sci-fi-adjacent" } }
+            }
+          }
+        }
+      ) {
         edges {
           node {
             title
@@ -29,9 +37,8 @@ export const useLatestBlogPosts = () => {
           }
         }
       }
-
     }
-    `)
+  `)
 
-    return data;
+  return data
 }
