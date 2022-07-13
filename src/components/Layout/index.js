@@ -15,9 +15,7 @@ import "./default-styles.scss"
 import "./custom-styles.scss"
 import "../../styles/styles.scss"
 
-
 const Layout = ({ children }) => {
-
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -38,7 +36,8 @@ const Layout = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
-          &copy; {new Date().getFullYear()} <a href="http://sailorven.us">sailorven.us</a>
+          &copy; {new Date().getFullYear()}{" "}
+          <a href="http://sailorven.us">sailorven.us</a>
         </footer>
       </div>
     </>

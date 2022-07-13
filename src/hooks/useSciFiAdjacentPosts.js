@@ -1,10 +1,10 @@
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby"
 
 export const useSciFiAdjacentPosts = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query SciFiAdjacentPostsQuery {
       wpgraphql {
-        posts(where: {categoryIn: "8"}) {
+        posts(where: { categoryIn: "8" }) {
           edges {
             node {
               title
@@ -21,8 +21,8 @@ export const useSciFiAdjacentPosts = () => {
           }
         }
       }
-      }
-    `)
+    }
+  `)
 
-    return data;
+  return data
 }

@@ -16,18 +16,19 @@ const Header = ({ siteTitle }) => {
         display: `flex`,
       }}
     >
-      <div className="header-child" style={{ visibility: `hidden`}}>search</div>
-      <div id="site-title" className="header-child">
-        <Link to="/">
-          {siteTitle}
-        </Link>
+      <div className="header-child" style={{ visibility: `hidden` }}>
+        search
       </div>
-      <div className="header-child"
-      style={{
-        textAlign: `right`,
-      }}
+      <div id="site-title" className="header-child">
+        <Link to="/">{siteTitle}</Link>
+      </div>
+      <div
+        className="header-child"
+        style={{
+          textAlign: `right`,
+        }}
       >
-        <div style={{ visibility: `hidden`}}></div>
+        <div style={{ visibility: `hidden` }}></div>
       </div>
     </header>
   )

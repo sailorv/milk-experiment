@@ -1,7 +1,7 @@
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby"
 
 export const useTaxonomy = () => {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query TaxonomyQuery {
       wpgraphql {
         categories {
@@ -21,7 +21,7 @@ export const useTaxonomy = () => {
         }
       }
     }
-    `)
+  `)
 
-    return data;
+  return data
 }
