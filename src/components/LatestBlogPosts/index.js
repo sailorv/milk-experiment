@@ -9,7 +9,7 @@ const LatestBlogPosts = () => {
   return (
     <div className="posts-wrapper">
       <div className="excerpt-posts">
-        {new Array(3).fill("").map((element, i) => (
+        {new Array(4).fill("").map((element, i) => (
           <ExcerptPost
             key={i}
             title={post.allWpPost.edges[`${i + 2}`].node.title}
