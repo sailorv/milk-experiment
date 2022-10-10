@@ -52,6 +52,30 @@ h2 {
     text-transform: uppercase;
 }
 
+// Blog Post Specific Settings
+.post-content {
+    h3 {
+        text-align: center;
+        max-width: 60%;
+        margin: 0 auto 2em auto;
+        font-weight: normal;
+
+        &::before {
+            content: '* ';
+        }
+
+        &::after {
+            content: ' *';
+        }
+    }
+
+    hr {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media only screen and (max-width:499px) {
     h1 {
         text-align: center;
