@@ -64,19 +64,8 @@ const HomeDashboard = () => {
               See all bytes
             </a>
           </div>
-        </div>
-        <div className="col-3">
-          <FeaturedPost />
-        </div>
-        <div className="col-3">
-          <h2>Further Reading</h2>
-          <LatestBlogPosts />
 
-          <SciFiAdjacentPosts />
-        </div>
-      </div>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
-        <div className="col-3">
+          <div className="guestbook-wrapper" style={{ marginTop: `2em`}}>
           <h2 style={{ marginBottom: `0` }}>leave a message</h2>
           <a
             href="/guestbook"
@@ -101,7 +90,10 @@ const HomeDashboard = () => {
                 `}</pre>
           </a>
         </div>
+        </div>
         <div className="col-3">
+          <FeaturedPost />
+
           <div className="links">
             <h2>Links</h2>
             <ul>
@@ -130,8 +122,11 @@ const HomeDashboard = () => {
             </ul>
           </div>
         </div>
-        <div className="col-3 mobile-hide">
-          <MoonPhase />
+        <div className="col-3">
+          <h2>Further Reading</h2>
+          <LatestBlogPosts />
+
+          <SciFiAdjacentPosts />
         </div>
       </div>
     </>
